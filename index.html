@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Open Uizard in Popup</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <button id="openPopup">Open Prototype</button>
+
+    <script>
+        document.getElementById('openPopup').addEventListener('click', function() {
+            // Get the full screen width and height
+            const width = screen.width;
+            const height = screen.height;
+            // Open a new window with full screen dimensions
+            window.open('https://app.uizard.io/p/b4fdf289/fullscreen', '_blank', `width=${width},height=${height}`);
+        });
+    </script>
+</body>
+</html>
